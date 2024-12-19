@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répertoire des Pays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Répertoire des Pays du Monde</h1>
+    <input type="text" id="search" placeholder="Rechercher un pays..." oninput="searchCountry()">
+    <table id="countries-table">
+        <thead>
+            <tr>
+                <th>Drapeau</th>
+                <th>Nom du pays</th>
+                <th>Capitale</th>
+                <th>Population</th>
+                <th>Superficie (km²)</th>
+                <th>Carte</th>
+            </tr>
+        </thead>
+        <tbody id="countries-list">
+            <!-- Les pays seront ajoutés ici par JavaScript -->
+        </tbody>
+    </table>
+<!-- Fenêtre modale pour la fiche pays -->
+<div id="country-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="country-name"></h2>
+        <img id="country-flag" alt="Drapeau du pays" class="flag-large">
+        <p><strong>Capitale :</strong> <span id="country-capital"></span></p>
+        <p><strong>Population :</strong> <span id="country-population"></span></p>
+        <p><strong>Superficie :</strong> <span id="country-area"></span></p>
+        <p><strong>Langues parlées :</strong> <span id="country-languages"></span></p>
+        <p><strong>Monuments célèbres :</strong> <span id="country-monuments"></span></p>
+        <p><strong>Plats typiques :</strong> <span id="country-dishes"></span></p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
